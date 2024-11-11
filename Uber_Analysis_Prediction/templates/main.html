@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Uber Fare Prediction</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 20px;
+        }
+        h1 {
+            color: #333;
+        }
+        .container {
+            max-width: 600px;
+            margin: auto;
+            background: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+        label {
+            display: block;
+            margin: 10px 0 5px;
+        }
+        input[type="number"], input[type="text"] {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            margin-bottom: 15px;
+        }
+        button {
+            background-color: #5cb85c;
+            color: white;
+            padding: 10px 15px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+        button:hover {
+            background-color: #4cae4c;
+        }
+        .footer {
+            margin-top: 20px;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Fare Prediction</h1>
+        <form action="/result" method="get">
+            <label for="Car_Condition">Car Condition:</label>
+            <input type="number" name="Car_Condition" id="Car_Condition" required min="0">
+
+            <label for="Weather">Weather:</label>
+            <input type="number" name="Weather" id="Weather" required min="0">
+
+            <label for="Traffic_Condition">Traffic Condition:</label>
+            <input type="number" name="Traffic_Condition" id="Traffic_Condition" required min="0">
+
+            <label for="pickup_longitude">Pickup Longitude:</label>
+            <input type="number" name="pickup_longitude" id="pickup_longitude" step="any" required>
+
+            <label for="pickup_latitude">Pickup Latitude:</label>
+            <input type="number" name="pickup_latitude" id="pickup_latitude" step="any" required>
+
+            <label for="dropoff_longitude">Dropoff Longitude:</label>
+            <input type="number" name="dropoff_longitude" id="dropoff_longitude" step="any" required>
+
+            <label for="dropoff_latitude">Dropoff Latitude:</label>
+            <input type="number" name="dropoff_latitude" id="dropoff_latitude" step="any" required>
+
+            <label for="passenger_count">Passenger Count:</label>
+            <input type="number" name="passenger_count" id="passenger_count" required min="1">
+
+            <label for="hour">Hour:</label>
+            <input type="number" name="hour" id="hour" required min="0" max="23">
+
+            <label for="day">Day:</label>
+            <input type="number" name="day" id="day" required min="1" max="31">
+
+            <label for="month">Month:</label>
+            <input type="number" name="month" id="month" required min="1" max="12">
+
+            <label for="weekday">Weekday:</label>
+            <input type="number" name="weekday" id="weekday" required min="0" max="6">
+
+            <label for="year">Year:</label>
+            <input type="number" name="year" id="year" required min="2000" max="2100">
+
+            <label for="jfk_dist">JFK Distance:</label>
+            <input type="number" name="jfk_dist" id="jfk_dist" step="any" required>
+
+            <label for="ewr_dist">EWR Distance:</label>
+            <input type="number" name="ewr_dist" id="ewr_dist" step="any" required>
+
+            <label for="lga_dist">LGA Distance:</label>
+            <input type="number" name="lga_dist" id="lga_dist" step="any" required>
+
+            <label for="sol_dist">Sol Distance:</label>
+            <input type="number" name="sol_dist" id="sol_dist" step="any" required>
+
+            <label for="nyc_dist">NYC Distance:</label>
+            <input type="number" name="nyc_dist" id="nyc_dist" step="any" required>
+
+            <label for="distance">Total Distance:</label>
+            <input type="number" name="distance" id="distance" step="any" required>
+
+            <label for="bearing">Bearing:</label>
+            <input type="number" name="bearing" id="bearing" step="any" required>
+
+            <button type="submit">Predict Fare</button>
+        </form>
+        <div class="footer">
+            <p>Powered by <a href="https://www.djangoproject.com/" target="_blank">Django</a></p>
+        </div>
+    </div>
+</body>
+</html>
