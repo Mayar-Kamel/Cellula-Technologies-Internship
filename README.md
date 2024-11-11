@@ -6,7 +6,11 @@ Projects
  • Objective: Build an accurate machine learning model to predict taxi fares.
  • Approach: Utilized various machine learning algorithms for regression, aiming to optimize fare estimation accuracy.
  • Outcome: The model helped improve the company's taxi fare prediction capabilities, showcasing my proficiency in machine learning and regression techniques.
-## 2. Deployment of Machine Learning Models
+## 2. Booking Cancellation Prediction
+ • Objective: Use classification models to predict whether a customer would cancel a booking.
+ • Approach: Developed a classification model to analyze customer data and predict cancellation likelihood, helping to improve resource allocation and customer management.
+ • Outcome: Enabled the company to anticipate cancellations more effectively, optimizing operational efficiency and enhancing customer service.
+## 3. Deployment of Machine Learning Models
  • Frameworks: Flask and Django
  • Objective: Integrate machine learning models into web applications for real-time usage.
  • Contribution: Developed and deployed machine learning models, enhancing application accessibility and user experience.
